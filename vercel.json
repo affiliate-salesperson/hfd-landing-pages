@@ -1,6 +1,15 @@
 {
-  "routes": [
-    { "src": "/sleep-reset-28", "dest": "/sleep-reset-28/index.html" },
-    { "src": "/sleep-reset-28/(.*)", "dest": "/sleep-reset-28/$1" }
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
   ]
 }
