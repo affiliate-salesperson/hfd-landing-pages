@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/sleep-reset-28", "dest": "/sleep-reset-28/index.html" },
+    { "src": "/sleep-reset-28/(.*)", "dest": "/sleep-reset-28/$1" }
+  ]
+}
