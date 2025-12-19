@@ -71,7 +71,15 @@
           </p>
 
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#buy" aria-label="Start the Sleep Reset 28">
+            <!-- UPDATED: Podia checkout + InitiateCheckout -->
+            <a
+              class="btn btn--primary"
+              href="https://carolinaaraujo.podia.com/sleep-reset/buy"
+              target="_blank"
+              rel="noopener"
+              aria-label="Start the Sleep Reset 28"
+              onclick="if(window.fbq){fbq('track','InitiateCheckout');}"
+            >
               Start the Sleep Reset 28™
             </a>
             <p class="micro-note">You’re not broken. Your sleep didn’t fail.</p>
@@ -219,9 +227,19 @@
         <div class="buy-card">
           <h3 class="buy-card__title">Sleep Reset 28™</h3>
           <p class="buy-card__price">US$17 — one-time payment</p>
-          <a class="btn btn--primary btn--wide" href="#" aria-label="Start the Sleep Reset 28 purchase">
+
+          <!-- UPDATED: Podia checkout + InitiateCheckout -->
+          <a
+            class="btn btn--primary btn--wide"
+            href="https://carolinaaraujo.podia.com/sleep-reset/buy"
+            target="_blank"
+            rel="noopener"
+            aria-label="Start the Sleep Reset 28 purchase"
+            onclick="if(window.fbq){fbq('track','InitiateCheckout');}"
+          >
             Start the Sleep Reset 28™
           </a>
+
           <p class="buy-card__fineprint">Health Flow Daily™ © 2025</p>
         </div>
       </div>
