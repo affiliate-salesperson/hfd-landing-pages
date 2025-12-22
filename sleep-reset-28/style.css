@@ -1,69 +1,54 @@
-/* =========================
-   RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+  --bg:#f8f6f2;
+  --text:#2e2f33;
+  --muted:#6f6a63;
+  --soft:#e9e4dc;
+  --border:#d8d2c8;
+
+  /* headline suave (não preto puro) */
+  --headline:#2f3a44; /* azul acinzentado escuro */
 }
 
-/* =========================
-   ROOT
-========================= */
-:root {
-  --bg: #f8f6f2;
-  --text: #2e2f33;
-  --headline: #2f3a44; /* tom escuro suave */
-  --muted: #6f6a63;
-  --soft: #ece7de;
-  --border: #d8d2c8;
+html { scroll-behavior: smooth; }
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
 }
 
-/* =========================
-   BASE
-========================= */
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* =========================
-   LAYOUT
-========================= */
-.container {
+.container{
   max-width: 760px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.section {
+/* mais respiro geral */
+.section{
   margin: 120px 0;
 }
 
-/* =========================
-   HERO
-========================= */
-.hero {
-  margin-top: 64px;
+/* linhas finas dividindo seções (exceto hero) */
+.section:not(.hero){
+  padding-top: 56px;
+  border-top: 1px solid rgba(216, 210, 200, 0.75);
 }
 
-.hero__grid {
-  display: grid;
+/* hero */
+.hero{ margin-top: 64px; border-top: none; padding-top: 0; }
+
+.hero__grid{
+  display:grid;
   grid-template-columns: 1fr 0.9fr;
   gap: 64px;
-  align-items: center;
+  align-items:center;
 }
 
-.hero__title {
+.hero__title{
   font-size: 2.5rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -71,149 +56,167 @@ img {
   margin-bottom: 24px;
 }
 
-.hero__subtitle {
+.hero__subtitle{
   font-size: 1.05rem;
   color: var(--muted);
-  margin-bottom: 32px;
-  max-width: 520px;
+  margin-bottom: 36px;
+  max-width: 560px;
 }
 
-.hero__visual img {
+.hero__image{
+  width: 100%;
   max-width: 320px;
+  height: auto;
+  display:block;
 }
 
-/* =========================
-   MICRO NOTES
-========================= */
-.micro-note {
+/* títulos de seção (hierarquia clara) */
+.section-title{
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+/* bloco de texto */
+.text-block p{
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+/* notas */
+.note{
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* micro notes */
+.micro-note{
   margin-top: 14px;
   font-size: 0.85rem;
   color: var(--muted);
 }
 
-/* =========================
-   TEXT BLOCKS
-========================= */
-.text-block p {
-  margin-bottom: 22px;
-  font-size: 1.05rem;
+.micro-note--secondary{
+  margin-top: 10px;
 }
 
-/* =========================
-   LISTS
-========================= */
-.list {
-  margin-top: 32px;
+/* listas */
+.list{
+  margin-top: 30px;
 }
 
-.list__item {
-  display: flex;
+.list__item{
+  display:flex;
   gap: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   font-size: 1.05rem;
 }
 
-.dash {
+.dash{
   color: var(--muted);
   min-width: 18px;
 }
 
-/* =========================
-   MICRO ADJUSTMENT
-========================= */
-.micro-adjustment {
+/* micro-adjustment */
+.micro-adjustment{
   margin: 56px 0;
   font-style: italic;
   color: var(--muted);
 }
 
-/* =========================
-   BUTTONS
-========================= */
-.btn {
-  display: inline-block;
+/* botões */
+.btn{
+  display:inline-block;
   padding: 14px 32px;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--text);
-  text-decoration: none;
+  text-decoration:none;
   font-size: 0.95rem;
   transition: background 0.25s ease;
 }
 
-.btn:hover {
-  background: var(--soft);
-}
+.btn:hover{ background: var(--soft); }
 
-.btn--wide {
+.btn--wide{
   width: 100%;
-  text-align: center;
+  text-align:center;
 }
 
-/* =========================
-   CTA MID
-========================= */
-.cta-mid {
-  margin: 80px 0;
-  text-align: center;
+/* CTA do meio */
+.cta-mid{
+  margin-top: 72px;
 }
 
-/* =========================
-   BUY SECTION
-========================= */
-.section--buy {
-  margin-top: 160px;
+/* buy card */
+.section--buy{
+  margin-top: 160px; /* mais respiro antes do preço */
 }
 
-.buy-card {
+.buy-card{
   border: 1px solid var(--border);
   padding: 48px 36px;
   text-align: center;
+  background: rgba(248, 246, 242, 0.65);
 }
 
-.buy-card h3 {
+.buy-card__title{
   font-size: 1.4rem;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.buy-card p {
-  margin-bottom: 12px;
+.buy-card__price{
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.price-stack{
+  margin: 34px 0 36px;
+}
+
+.price-now{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.price-regular{
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
-/* =========================
-   FOOTER
-========================= */
-.site-footer {
+/* footer */
+.site-footer{
   margin: 140px 0 56px;
-  text-align: center;
+  text-align:center;
 }
 
-.footer__text {
+.footer__text{
   font-size: 0.8rem;
   color: var(--muted);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .hero__grid {
+/* responsive */
+@media (max-width: 768px){
+  .hero__grid{
     grid-template-columns: 1fr;
     gap: 48px;
   }
 
-  .hero__title {
-    font-size: 2.1rem;
-  }
+  .hero__title{ font-size: 2.1rem; }
 
-  .section {
-    margin: 88px 0;
-  }
-
-  .hero__visual img {
+  .hero__image{
+    max-width: 260px;
     margin: 0 auto;
-    display: block;
+  }
+
+  .section{ margin: 88px 0; }
+
+  .section:not(.hero){
+    padding-top: 44px;
   }
 }
