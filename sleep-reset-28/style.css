@@ -122,6 +122,16 @@ body{
 }
 
 /* =========================
+   TRADEMARK (™)
+========================= */
+.tm{
+  font-size: 0.6em;
+  vertical-align: super;
+  line-height: 0;
+  margin-left: 2px;
+}
+
+/* =========================
    LISTS
 ========================= */
 .list{
