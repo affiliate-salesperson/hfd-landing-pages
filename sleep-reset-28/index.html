@@ -16,7 +16,7 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -26,14 +26,24 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+
     fbq('init', '830661256082964');
     fbq('track', 'PageView');
+
+    /* ViewContent — EVENTO PADRÃO (dispara no load da LP) */
+    fbq('track', 'ViewContent', {
+      content_name: 'Sleep Reset 28',
+      content_category: 'Sleep Program',
+      value: 17.00,
+      currency: 'USD'
+    });
   </script>
+
   <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=830661256082964&ev=PageView&noscript=1" />
   </noscript>
-  <!-- End Meta Pixel Code -->
+  <!-- End Meta Pixel -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -52,7 +62,7 @@
 
   <main class="page">
 
-    <!-- 1) HERO — FULL WIDTH -->
+    <!-- HERO -->
     <section class="section section--hero">
       <div class="container hero-grid">
         <div class="hero-copy">
@@ -65,7 +75,7 @@
           <div class="cta-stack">
             <a
               class="btn btn--cta"
-              href="https://carolinaaraujo.podia.com/sleep-reset/buy"
+              href="https://healthflowdaily.podia.com/sleep-reset/buy"
               target="_blank"
               rel="noopener"
               aria-label="Start the Sleep Reset 28"
@@ -85,20 +95,17 @@
       </div>
     </section>
 
-    <!-- 2) CONTEXTO / PROBLEMA — FULL WIDTH -->
+    <!-- THE PROBLEM -->
     <section class="section">
       <div class="container">
         <div class="card">
           <h2 class="section-title">The Problem — No Drama</h2>
-
           <div class="text">
-            <!-- Ajuste 1: Reagrupar para 2 blocos (copy idêntica, menos enters) -->
             <p>
               If falling asleep feels harder than it used to,
               if your mind stays alert at night even when your body is tired,
-              or if your sleep feels irregular and unpredictable — You’re not broken.
+              or if your sleep feels irregular and unpredictable — you’re not broken.
             </p>
-
             <p>
               Modern life disrupts rhythm.
               Light, stimulation, stress, and inconsistency quietly push the nervous system into alert mode.
@@ -111,138 +118,11 @@
       </div>
     </section>
 
-    <!-- 3) BLOCO 2 COLUNAS — What's Included | How It Works -->
-    <section class="section">
-      <div class="container">
-        <div class="card card--dense">
-          <div class="grid-two">
-            <div class="col">
-              <h2 class="section-title">What’s Included</h2>
-
-              <div class="text">
-                <p>When you join Sleep Reset 28™, you receive:</p>
-              </div>
-
-              <ul class="list">
-                <li><span class="bullet">•</span><span>28 Daily Audios (30–60 seconds each)<br />One simple focus per day — no multitasking.</span></li>
-                <li><span class="bullet">•</span><span>Morning Reset Audio<br />To stabilize your wake-up rhythm and start the day aligned.</span></li>
-                <li><span class="bullet">•</span><span>Evening Reset Audio<br />To help your nervous system downshift before bedtime.</span></li>
-                <li><span class="bullet">•</span><span>Reset Audio<br />For moments of overstimulation or mental acceleration.</span></li>
-                <li><span class="bullet">•</span><span>Emergency Reset Audio<br />For acute stress, anxiety, or emotional overload.</span></li>
-                <li><span class="bullet">•</span><span>Breathing Reset Audio<br />A short breathing pattern to calm your system anytime.</span></li>
-                <li><span class="bullet">•</span><span>PDF Guide<br />Explaining how the program works, what to expect, and how to stay consistent.</span></li>
-              </ul>
-            </div>
-
-            <div class="col col--divider">
-              <h2 class="section-title">How It Works</h2>
-
-              <div class="text">
-                <p>Every day, you’ll:</p>
-              </div>
-
-              <ol class="list list--ordered">
-                <li><span class="bullet">1.</span><span>Wake up at your chosen time</span></li>
-                <li><span class="bullet">2.</span><span>Listen to the day’s short audio</span></li>
-                <li><span class="bullet">3.</span><span>Complete one simple action</span></li>
-                <li><span class="bullet">4.</span><span>Follow your consistent bedtime</span></li>
-                <li><span class="bullet">5.</span><span>Use support audios whenever needed</span></li>
-              </ol>
-
-              <p class="micro micro--note">You don’t need perfection. You only need presence.</p>
-            </div>
-          </div>
-
-          <!-- CTA #2 -->
-          <div class="cta-inline">
-            <a
-              class="btn btn--cta btn--ghost"
-              href="https://carolinaaraujo.podia.com/sleep-reset/buy"
-              target="_blank"
-              rel="noopener"
-              aria-label="Start the Sleep Reset 28 (middle)"
-              onclick="if(window.fbq){fbq('track','InitiateCheckout');}"
-            >
-              Start the Sleep Reset 28™
-            </a>
-            <p class="micro">Instant access • Secure checkout • Audio-guided</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4) BLOCO 2 COLUNAS — For | Not For -->
-    <section class="section">
-      <div class="container">
-        <div class="card card--dense">
-          <div class="grid-two">
-            <div class="col">
-              <h2 class="section-title">Who This Is For</h2>
-
-              <div class="text">
-                <p>This program is for you if:</p>
-              </div>
-
-              <ul class="list">
-                <li><span class="bullet">•</span><span>You struggle to fall asleep or stay asleep consistently</span></li>
-                <li><span class="bullet">•</span><span>Your mind feels alert at night even when you’re tired</span></li>
-                <li><span class="bullet">•</span><span>Your sleep schedule feels irregular or unstable</span></li>
-                <li><span class="bullet">•</span><span>You want a calm, realistic approach — not rigid rules</span></li>
-                <li><span class="bullet">•</span><span>You’re exhausted by complicated routines and promises</span></li>
-              </ul>
-            </div>
-
-            <div class="col col--divider">
-              <h2 class="section-title">Who This Is Not For</h2>
-
-              <div class="text">
-                <p>This program may not be right for you if:</p>
-              </div>
-
-              <ul class="list">
-                <li><span class="bullet">•</span><span>You’re looking for instant or guaranteed results</span></li>
-                <li><span class="bullet">•</span><span>You want a highly technical or medical treatment</span></li>
-                <li><span class="bullet">•</span><span>You expect dramatic changes without consistency</span></li>
-                <li><span class="bullet">•</span><span>You prefer aggressive protocols or strict routines</span></li>
-              </ul>
-
-              <p class="micro micro--note">Sleep Reset 28™ works through rhythm, not intensity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5) EXPECTATIONS — FULL WIDTH -->
-    <section class="section">
-      <div class="container">
-        <div class="card">
-          <h2 class="section-title">Expectations</h2>
-
-          <div class="text">
-            <p>Sleep may not improve overnight — and that’s normal.</p>
-
-            <p>This reset works through:</p>
-
-            <ul class="list">
-              <li><span class="bullet">•</span><span>repetition</span></li>
-              <li><span class="bullet">•</span><span>predictability</span></li>
-              <li><span class="bullet">•</span><span>nervous system regulation</span></li>
-              <li><span class="bullet">•</span><span>small daily actions</span></li>
-            </ul>
-
-            <p>Subtle changes build strong results.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6) PRICE + CTA FINAL — FULL WIDTH -->
+    <!-- PRICE + CTA FINAL -->
     <section class="section">
       <div class="container">
         <div class="card card--price">
           <h2 class="section-title">Sleep Reset 28™</h2>
-
           <p class="price-line">Full 28-day guided system</p>
 
           <div class="price-stack">
@@ -252,7 +132,7 @@
 
           <a
             class="btn btn--cta btn--wide"
-            href="https://carolinaaraujo.podia.com/sleep-reset/buy"
+            href="https://healthflowdaily.podia.com/sleep-reset/buy"
             target="_blank"
             rel="noopener"
             aria-label="Start the Sleep Reset 28 purchase"
