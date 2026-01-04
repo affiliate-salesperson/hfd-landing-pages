@@ -47,7 +47,7 @@ body{
 }
 
 .site-logo{
-  height: 22px;
+  height: 34px;
   width: auto;
   display: block;
 }
@@ -307,7 +307,7 @@ body{
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 18px;
+  height: 24px;
   width: auto;
   display: block;
 }
