@@ -34,6 +34,25 @@ body{
 }
 
 /* =========================
+   HEADER (LOGO)
+========================= */
+.site-header{
+  padding: 18px 0 0;
+}
+
+.header-inner{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.site-logo{
+  height: 22px;
+  width: auto;
+  display: block;
+}
+
+/* =========================
    SECTIONS
 ========================= */
 .section{
@@ -122,7 +141,7 @@ body{
 }
 
 /* =========================
-   TRADEMARK (™)
+   TRADEMARK (™️)
 ========================= */
 .tm{
   font-size: 0.6em;
@@ -271,9 +290,26 @@ body{
   text-align: center;
 }
 
+/* Footer with logo pinned bottom-right */
+.footer--with-logo{
+  position: relative;
+  padding-bottom: 18px;
+  padding-right: 52px; /* ensures the logo doesn't collide with centered text */
+  min-height: 34px;    /* gives room for the pinned logo */
+}
+
 .footer-text{
   font-size: 0.8rem;
   color: var(--muted);
+}
+
+.footer-logo{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 18px;
+  width: auto;
+  display: block;
 }
 
 /* =========================
@@ -306,4 +342,14 @@ body{
   .section{ padding: 56px 0; }
 
   .hero-title{ font-size: 2.1rem; }
+
+  /* Header/Logo breathing room on mobile */
+  .site-header{
+    padding: 14px 0 0;
+  }
+
+  /* Footer logo: keep spacing safe on small screens */
+  .footer--with-logo{
+    padding-right: 46px;
+  }
 }
