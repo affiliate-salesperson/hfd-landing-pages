@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refund Policy | Health Flow Daily</title>
+  <meta name="description" content="Refund Policy for Sleep Reset 28." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <main class="page">
+    <div class="container">
+
+      <nav class="legal-back">
+        <a href="/sleep-reset-28">← Back to Sleep Reset 28</a>
+      </nav>
+
+      <h1>Refund Policy</h1>
+
+      <p>We want you to feel comfortable trying Sleep Reset 28.</p>
+
+      <p>
+        Because this is a digital product, refunds are offered on a case-by-case basis.
+      </p>
+
+      <p>
+        If you feel this product is not right for you, please contact us within
+        7 days of purchase at:<br />
+        support@thehealthflowdaily.com
+      </p>
+
+      <p>
+        Include your purchase email and reason for the request.
+      </p>
+
+      <p>We will review your request and respond within 24–48 hours.</p>
+
+    </div>
+  </main>
+</body>
+</html>
