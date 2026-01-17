@@ -1,4 +1,3 @@
-<!-- index.html (FINAL PARA DEPLOY) -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,9 +15,8 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WMPXFJ27');
   </script>
-  <!-- End Google Tag Manager -->
 
-  <!-- Meta Pixel Code (PageView + InitiateCheckout + 1 custom event) -->
+  <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,81 +26,65 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-
     fbq('init', '830661256082964');
     fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=830661256082964&ev=PageView&noscript=1" />
-  </noscript>
-  <!-- End Meta Pixel Code -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="./style.css" />
+  <!-- ABSOLUTE PATH (fix definitivo) -->
+  <link rel="stylesheet" href="/sleep-reset-28/style.css" />
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
+  <!-- GTM noscript -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMPXFJ27"
       height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <main class="page">
+    <div id="top"></div>
+
     <div class="container">
 
-      <!-- BLOCO 1 — HEADLINE -->
-      <section class="section section-hero" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="hero-title">
-          Can’t sleep because your mind won’t shut off?
-        </h1>
+      <!-- CARD 1 -->
+      <section class="card">
+        <h1 class="hero-title">Can’t sleep because your mind won’t shut off?</h1>
+        <p class="lead">A simple, guided way to help your mind slow down at night.</p>
       </section>
 
-      <!-- BLOCO 2 — SUBHEADLINE -->
-      <section class="section section-subheadline">
-        <p class="lead">
-          A simple, guided way to help your mind slow down at night.
-        </p>
-      </section>
-
-      <!-- BLOCO 3 — DESARME DE DESCONFIANÇA -->
-      <section class="section section-disarm">
-        <p class="body">
-          This is not a miracle solution.<br />
-          And it won’t force your sleep.
-        </p>
-
-        <p class="body">
+      <!-- CARD 2 -->
+      <section class="card">
+        <p>This is not a miracle solution.<br />And it won’t force your sleep.</p>
+        <p>
           It’s a gentle first step for nights when your body is tired,<br />
           but your thoughts keep racing.
         </p>
       </section>
 
-      <!-- BLOCO 4 — O QUE É -->
-      <section class="section section-what-it-is">
-        <p class="body">
+      <!-- CARD 3 -->
+      <section class="card">
+        <p>
           Sleep Reset 28 is a gentle 28-day program with short guided audios.<br />
           One short guided audio per night.<br />
           No techniques to learn.
         </p>
       </section>
 
-      <!-- BLOCO 5 — QUALIFICAÇÃO -->
-      <section class="section section-qualify">
-        <p class="section-label">This may be for you if:</p>
-        <ul class="list">
+      <!-- CARD 4 -->
+      <section class="card">
+        <p><strong>This may be for you if:</strong></p>
+        <ul>
           <li>Your body is exhausted, but your mind won’t stop</li>
           <li>Stress or anxiety keeps you awake at night</li>
           <li>You’re tired of trying complicated things</li>
         </ul>
 
-        <p class="section-label spacer-top">This may NOT be for you if:</p>
-        <ul class="list">
+        <p class="spacer"><strong>This may NOT be for you if:</strong></p>
+        <ul>
           <li>You want instant results</li>
           <li>You’re looking for medication</li>
           <li>You want a complex system</li>
@@ -110,9 +92,9 @@
         </ul>
       </section>
 
-      <!-- BLOCO 6 — BAIXO RISCO -->
-      <section class="section section-low-risk">
-        <ul class="list">
+      <!-- CARD 5 -->
+      <section class="card">
+        <ul>
           <li>No pills or supplements</li>
           <li>No pressure</li>
           <li>No promises</li>
@@ -120,26 +102,25 @@
         </ul>
       </section>
 
-      <!-- BLOCO 7 — CTA -->
-      <section class="section section-cta">
+      <!-- CARD 6 CTA -->
+      <section class="card card-center">
         <a
           class="btn-primary"
           href="https://healthflowdaily.podia.com/sleep-reset-28"
           rel="noopener noreferrer"
-          aria-label="See how it works"
           onclick="if(window.fbq){fbq('track','InitiateCheckout');fbq('trackCustom','LP_CTA_Click');}"
         >
           See how it works
         </a>
       </section>
 
-      <!-- RODAPÉ -->
-      <footer class="site-footer" aria-label="Footer">
-        <nav class="footer-nav" aria-label="Footer links">
-          <a class="footer-link" href="./privacy-policy">Privacy Policy</a>
-          <a class="footer-link" href="./terms-of-service">Terms of Service</a>
-          <a class="footer-link" href="./contact">Contact</a>
-          <a class="footer-link" href="./refund-policy">Refund Policy</a>
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <nav class="footer-nav">
+          <a href="./privacy-policy/">Privacy Policy</a>
+          <a href="./terms-of-service/">Terms of Service</a>
+          <a href="./contact/">Contact</a>
+          <a href="./refund-policy/">Refund Policy</a>
         </nav>
       </footer>
 
