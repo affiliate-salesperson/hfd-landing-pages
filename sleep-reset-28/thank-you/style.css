@@ -248,3 +248,18 @@ strong{
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================
+   THANK YOU — FORCE CENTER
+========================= */
+.card-center{
+  text-align: center;
+}
+
+.card-center p,
+.card-center .lead,
+.card-center .authority-inline{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
