@@ -329,7 +329,7 @@ main.page .container ul{
    FINAL CTA — MICRO-SEAL FIX
 ========================= */
 .closing{
-  margin-top: 10px !important;
+  margin-top: 6px !important;   /* mais compacto */
   padding: 0 !important;
 
   display: flex !important;
