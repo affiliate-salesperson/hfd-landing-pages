@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- ABSOLUTE PATH (fix definitivo) -->
+  <!-- ABSOLUTE PATH -->
   <link rel="stylesheet" href="/sleep-reset-28/style.css" />
 </head>
 
@@ -144,10 +144,10 @@
 
       <!-- FOR YOU / NOT FOR YOU -->
       <section class="card" aria-label="For you and not for you">
-        <div class="two-col">
+        <div class="two-col two-col-tight">
           <div class="col">
             <p class="section-kicker"><strong>This may be for you if:</strong></p>
-            <ul>
+            <ul class="list-tight">
               <li>Your body is exhausted, but your mind won’t stop</li>
               <li>Stress or anxiety keeps you awake at night</li>
               <li>You’re tired of trying complicated things</li>
@@ -156,7 +156,7 @@
 
           <div class="col">
             <p class="section-kicker"><strong>This may NOT be for you if:</strong></p>
-            <ul>
+            <ul class="list-tight">
               <li>You want instant results</li>
               <li>You’re looking for medication</li>
               <li>You want a complex system</li>
@@ -166,9 +166,9 @@
         </div>
       </section>
 
-      <!-- WHAT YOU'LL RECEIVE (existing list, compact card) -->
+      <!-- WHAT YOU'LL RECEIVE -->
       <section class="card" aria-label="What you'll receive">
-        <ul class="simple-list">
+        <ul class="simple-list list-columns">
           <li>No pills or supplements</li>
           <li>No pressure</li>
           <li>No promises</li>
@@ -180,27 +180,27 @@
       <section class="card" aria-label="How it works">
         <h2 class="section-title">How It Works</h2>
 
-        <div class="steps-grid">
-          <div class="step">
+        <div class="steps-grid steps-compact">
+          <div class="step step-compact">
             <p class="step-title"><strong>Step 1</strong></p>
             <p class="step-text">Press play at night and get comfortable.</p>
           </div>
 
-          <div class="step">
+          <div class="step step-compact">
             <p class="step-title"><strong>Step 2</strong></p>
             <p class="step-text">Follow the short guided audio as your body and mind slow down.</p>
           </div>
 
-          <div class="step">
+          <div class="step step-compact">
             <p class="step-title"><strong>Step 3</strong></p>
             <p class="step-text">Repeat nightly for 28 days to build a calmer sleep routine.</p>
           </div>
         </div>
       </section>
 
-      <!-- AUTHORITY + FINAL CTA -->
-      <section class="card card-center" aria-label="Closing CTA">
-        <p class="authority">Created by Health Flow Daily</p>
+      <!-- FINAL CTA (micro-seal + button, no isolated card) -->
+      <section class="closing" aria-label="Final CTA">
+        <p class="authority-inline">Created by Health Flow Daily</p>
 
         <a
           class="btn-primary"
