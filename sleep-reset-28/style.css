@@ -324,3 +324,25 @@ main.page .container ul{
 @media (prefers-reduced-motion: reduce){
   .btn-primary{ transition: none; transform: none; }
 }
+
+/* =========================
+   FINAL CTA — MICRO-SEAL FIX
+========================= */
+.closing{
+  margin-top: 10px !important;
+  padding: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  text-align: center !important;
+}
+
+.closing .authority-inline{
+  max-width: none !important;   /* remove regra editorial */
+  margin: 0 0 10px 0 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: var(--subheadline) !important;
+}
