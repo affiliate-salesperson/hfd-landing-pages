@@ -1,9 +1,10 @@
 /* =========================================================
    Health Flow Daily™ — Sleep Reset 28 (Google Search LP)
-   style.css (UPDATED)
-   - Warm premium palette (client-approved exception)
-   - Desktop columns for LP
-   - Editorial readability for legal pages (same CSS)
+   style.css (POLISHED)
+   - More compact cards + tighter rhythm
+   - Desktop columns preserved
+   - Editorial legal pages preserved
+   - Micro-seal authority line attached to final CTA
    ========================================================= */
 
 /* =========================
@@ -17,7 +18,7 @@
 
   /* Backgrounds */
   --bg: #F8F5F0;          /* off-white / light beige */
-  --surface: #FFFFFF;     /* card */
+  --surface: #FFFFFF;
   --surfaceTint: rgba(255,255,255,0.92);
 
   /* Lines & shadows */
@@ -34,12 +35,16 @@
 
   /* Layout widths */
   --lp-max: 1040px;       /* wide enough for 2-col / 3-col */
-  --text-max: 72ch;       /* editorial line length for legal/content pages */
+  --text-max: 72ch;       /* editorial line length for legal pages */
 
-  /* Spacing */
+  /* Spacing (compacted) */
   --pad-x: 18px;
-  --pad-top: 36px;
-  --pad-bottom: 56px;
+  --pad-top: 28px;
+  --pad-bottom: 48px;
+
+  --card-pad-y: 22px;
+  --card-pad-x: 20px;
+  --card-gap: 12px;
 }
 
 /* =========================
@@ -106,7 +111,7 @@ button:focus-visible{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 6px 2px 18px;
+  padding: 6px 2px 14px;
 }
 
 .brand{
@@ -115,7 +120,7 @@ button:focus-visible{
 }
 
 .brand-logo{
-  width: 175px;
+  width: 172px;
   height: auto;
   opacity: 0.92;
 }
@@ -127,20 +132,16 @@ button:focus-visible{
   background: var(--surfaceTint);
   border: 1px solid var(--line);
   border-radius: var(--radius-card);
-  padding: 26px 22px;
+  padding: var(--card-pad-y) var(--card-pad-x);
   box-shadow: var(--shadow);
 }
 
 .card + .card{
-  margin-top: 16px;
-}
-
-.card-center{
-  text-align: center;
+  margin-top: var(--card-gap);
 }
 
 .card-hero{
-  padding: 26px 22px;
+  padding: calc(var(--card-pad-y) + 2px) var(--card-pad-x);
 }
 
 /* =========================
@@ -165,7 +166,7 @@ h2{
 }
 
 p{
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0; /* tighter */
   font-size: 16px;
   color: var(--text);
 }
@@ -180,11 +181,11 @@ strong{
 }
 
 .section-title{
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
 }
 
 .section-kicker{
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* =========================
@@ -196,14 +197,23 @@ ul{
 }
 
 li{
-  margin: 8px 0;
+  margin: 7px 0; /* tighter */
   font-size: 16px;
   color: var(--text);
   line-height: 1.55;
 }
 
+.list-tight{
+  margin-top: 6px;
+}
+
 .simple-list{
   padding-left: 18px;
+}
+
+/* 2 columns on desktop to reduce perceived length */
+.list-columns{
+  column-gap: 28px;
 }
 
 /* =========================
@@ -246,18 +256,18 @@ li{
 .hero-grid{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 12px; /* reduced (mobile) */
   align-items: center;
 }
 
 .hero-subtitle{
-  margin: 10px 0 10px 0;
+  margin: 10px 0 8px 0;
   color: var(--subheadline);
   line-height: 1.55;
 }
 
 .hero-micro{
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 500;
@@ -265,20 +275,17 @@ li{
 }
 
 .hero-bullets{
-  margin: 0 0 18px 18px;
+  margin: 0 0 14px 18px; /* reduced */
   padding: 0;
 }
 
-.hero-bullets li{
-  margin: 8px 0;
-}
-
 .hero-cta{
-  margin-top: 6px;
+  margin-top: 4px;
+  margin-bottom: 2px; /* helps tighten CTA->image on mobile */
 }
 
 .product-cover{
-  width: min(380px, 100%);
+  width: min(360px, 100%);
   border-radius: 14px;
   border: 1px solid var(--line);
   box-shadow: 0 18px 52px rgba(58, 52, 48, 0.10);
@@ -291,7 +298,11 @@ li{
 .two-col{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
+  gap: 16px; /* tighter */
+}
+
+.two-col-tight .col{
+  /* nothing structural; keeps hook for future */
 }
 
 /* =========================
@@ -300,14 +311,17 @@ li{
 .steps-grid{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: 10px; /* tighter */
 }
 
 .step{
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: 14px 14px;
   background: rgba(248, 245, 240, 0.60);
+}
+
+.step-compact{
+  padding: 12px 12px; /* less internal padding */
 }
 
 .step-title{
@@ -321,11 +335,17 @@ li{
 }
 
 /* =========================
-   AUTHORITY
+   FINAL CTA (no card, micro-seal)
 ========================= */
-.authority{
-  margin: 0 0 14px 0;
-  font-size: 14px;
+.closing{
+  margin-top: 12px;       /* tighter */
+  text-align: center;
+  padding: 6px 0 0;       /* no box, just flow */
+}
+
+.authority-inline{
+  margin: 0 0 10px 0;     /* 8–12px */
+  font-size: 13px;        /* smaller than body */
   color: var(--subheadline);
   font-weight: 500;
 }
@@ -334,8 +354,8 @@ li{
    FOOTER
 ========================= */
 .site-footer{
-  margin-top: 44px;
-  padding-top: 18px;
+  margin-top: 28px;       /* tighter */
+  padding-top: 16px;
   border-top: 1px solid var(--line);
 }
 
@@ -360,7 +380,6 @@ li{
 
 /* =========================
    LEGAL PAGES (editorial)
-   Your legal pages use .legal-back + h1 + p
 ========================= */
 .legal-back{
   margin-bottom: 18px;
@@ -377,7 +396,7 @@ li{
   text-underline-offset: 3px;
 }
 
-/* Editorial line-length on legal pages (and any plain text pages) */
+/* Editorial line-length on legal pages (and plain text pages) */
 main.page .container p,
 main.page .container ul{
   max-width: var(--text-max);
@@ -395,26 +414,30 @@ main.page .container h3{
 ========================= */
 @media (max-width: 640px){
   :root{
-    --pad-top: 28px;
-    --pad-bottom: 44px;
+    --pad-top: 24px;
+    --pad-bottom: 42px;
     --pad-x: 16px;
+
+    --card-pad-y: 20px;
+    --card-pad-x: 18px;
+    --card-gap: 10px;
   }
 
   .brand-logo{
     width: 165px;
   }
 
-  .card{
-    padding: 22px 18px;
-    border-radius: 12px;
-  }
-
   p, li{
-    font-size: 16px;
+    font-size: 16px; /* do not reduce below this */
   }
 
   .btn-primary{
     width: 100%;
+  }
+
+  /* keep list columns off on mobile */
+  .list-columns{
+    column-count: 1;
   }
 }
 
@@ -423,40 +446,41 @@ main.page .container h3{
 ========================= */
 @media (min-width: 900px){
   :root{
-    --pad-top: 44px;
-    --pad-bottom: 64px;
+    --pad-top: 40px;
+    --pad-bottom: 58px;
     --pad-x: 22px;
+
+    --card-pad-y: 24px;
+    --card-pad-x: 24px;
+    --card-gap: 12px;
   }
 
   .topbar{
-    padding: 8px 2px 22px;
+    padding: 8px 2px 18px;
   }
 
   .brand-logo{
     width: 185px;
   }
 
-  .card{
-    padding: 28px 26px;
-  }
-
-  .card + .card{
-    margin-top: 18px;
-  }
-
   .hero-grid{
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 26px;
+    gap: 22px; /* slightly tighter */
+    align-items: center;
   }
 
   .two-col{
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 18px; /* tighter */
   }
 
   .steps-grid{
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 12px; /* tighter */
+  }
+
+  .list-columns{
+    column-count: 2;
   }
 
   .footer-nav{
