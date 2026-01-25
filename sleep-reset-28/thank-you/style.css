@@ -1,0 +1,250 @@
+/* =========================================================
+   Health Flow Daily™ — Sleep Reset 28
+   Thank You Page — style.css (Standalone)
+   Location: /sleep-reset-28/thank-you/style.css
+   ========================================================= */
+
+/* =========================
+   TOKENS
+========================= */
+:root{
+  /* Warm premium palette (approved) */
+  --headline: #3A3430;
+  --subheadline: #4A4542;
+  --text: #5A5552;
+
+  --bg: #F8F5F0;               /* off-white / light beige */
+  --surface: rgba(255,255,255,0.92);
+  --line: rgba(58, 52, 48, 0.12);
+
+  --shadow: 0 14px 44px rgba(58, 52, 48, 0.06);
+
+  --radius-card: 14px;
+
+  --container-max: 860px;
+  --text-max: 72ch;
+
+  --pad-x: 18px;
+  --pad-top: 28px;
+  --pad-bottom: 48px;
+}
+
+/* =========================
+   RESET
+========================= */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{ color: inherit; text-decoration: none; }
+
+a:focus-visible{
+  outline: 2px solid rgba(58, 52, 48, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+.page{ min-height: 100%; }
+
+.container{
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+}
+
+/* =========================
+   TOP BAR (logo)
+========================= */
+.topbar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 2px 14px;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo{
+  width: 172px;
+  height: auto;
+  opacity: 0.92;
+}
+
+/* =========================
+   CARD
+========================= */
+.card{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+}
+
+.card + .card{
+  margin-top: 12px;
+}
+
+.card-center{
+  text-align: left; /* default (mobile-friendly reading) */
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1{
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  font-size: clamp(30px, 4.8vw, 44px);
+  color: var(--headline);
+}
+
+p{
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  color: var(--text);
+  max-width: var(--text-max);
+}
+
+p:last-child{ margin-bottom: 0; }
+
+strong{
+  font-weight: 600;
+  color: var(--headline);
+}
+
+/* Slightly larger lead (optional) */
+.lead{
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--subheadline);
+  max-width: var(--text-max);
+}
+
+/* Micro-seal */
+.authority-inline{
+  margin: 0 0 10px 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--subheadline);
+  letter-spacing: 0.01em;
+  max-width: none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer{
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.footer-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  justify-content: center;
+}
+
+.footer-nav a{
+  font-size: 14px;
+  color: var(--subheadline);
+  line-height: 1.4;
+}
+
+.footer-nav a:hover{
+  color: var(--headline);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================
+   OPTIONAL: Legal back link styling
+   (if you ever add a “Back” link here)
+========================= */
+.legal-back{
+  margin-bottom: 18px;
+}
+
+.legal-back a{
+  font-size: 14px;
+  color: var(--subheadline);
+  line-height: 1.4;
+}
+
+.legal-back a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 640px){
+  :root{
+    --pad-top: 24px;
+    --pad-bottom: 42px;
+    --pad-x: 16px;
+  }
+
+  .brand-logo{ width: 165px; }
+
+  /* keep readability */
+  p, .lead{ font-size: 16px; }
+  .lead{ font-size: 17px; }
+}
+
+@media (min-width: 900px){
+  :root{
+    --pad-top: 40px;
+    --pad-bottom: 58px;
+    --pad-x: 22px;
+  }
+
+  .brand-logo{ width: 185px; }
+
+  /* Slightly more “editorial” on desktop */
+  .card{ padding: 24px 24px; }
+  .card-center{ text-align: center; }  /* becomes centered on desktop */
+  .footer-nav{ justify-content: flex-end; }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce){
+  *{
+    scroll-behavior: auto !important;
+  }
+}
