@@ -1,22 +1,65 @@
 /* =========================================================
    Health Flow Daily™ — Sleep Reset 28 (Google Search LP)
-   style.css — PREMIUM + CARDS
+   style.css (UPDATED)
+   - Warm premium palette (client-approved exception)
+   - Desktop columns for LP
+   - Editorial readability for legal pages (same CSS)
    ========================================================= */
+
+/* =========================
+   TOKENS
+========================= */
+:root{
+  /* Client-approved warm text palette (exception) */
+  --headline: #3A3430;
+  --subheadline: #4A4542;
+  --text: #5A5552;
+
+  /* Backgrounds */
+  --bg: #F8F5F0;          /* off-white / light beige */
+  --surface: #FFFFFF;     /* card */
+  --surfaceTint: rgba(255,255,255,0.92);
+
+  /* Lines & shadows */
+  --line: rgba(58, 52, 48, 0.12);
+  --shadow: 0 14px 44px rgba(58, 52, 48, 0.06);
+
+  /* CTA */
+  --accent: #E8DFD8;
+  --accent-hover: #D9CDC5;
+
+  /* Radii */
+  --radius-card: 14px;
+  --radius-btn: 10px;
+
+  /* Layout widths */
+  --lp-max: 1040px;       /* wide enough for 2-col / 3-col */
+  --text-max: 72ch;       /* editorial line length for legal/content pages */
+
+  /* Spacing */
+  --pad-x: 18px;
+  --pad-top: 36px;
+  --pad-bottom: 56px;
+}
 
 /* =========================
    RESET
 ========================= */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after{
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html, body{
+  height: 100%;
+}
 
-body {
+body{
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #2B2B2B;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,53 +67,80 @@ body {
   overflow-x: hidden;
 }
 
-/* =========================
-   PALETTE (OFFICIAL)
-========================= */
-:root{
-  --bg: #FFFFFF;
-  --bg-soft: #F7F7F7;
-  --bg-warm: #F8F5F0;
-  --mist: #F3F3F3;
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-  --text: #2B2B2B;     /* Charcoal Premium */
-  --muted: #5A5A5A;    /* Stone Gray */
+a{
+  color: inherit;
+  text-decoration: none;
+}
 
-  --accent: #E8DFD8;   /* Nude Premium */
-  --accent-hover: #D9CDC5;
-
-  --line: #EAE7E3;     /* Subtle Line */
-  --card: rgba(255,255,255,0.90);
+a:focus-visible,
+button:focus-visible{
+  outline: 2px solid rgba(58, 52, 48, 0.35);
+  outline-offset: 3px;
+  border-radius: 10px;
 }
 
 /* =========================
    LAYOUT
 ========================= */
-.page { min-height: 100%; }
+.page{
+  min-height: 100%;
+}
 
 .container{
   width: 100%;
-  max-width: 820px;
+  max-width: var(--lp-max);
   margin: 0 auto;
-  padding: 72px 20px 56px;
+  padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
 }
 
 /* =========================
-   CARDS (CAIXINHAS)
+   TOP BAR (logo)
+========================= */
+.topbar{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px 2px 18px;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo{
+  width: 175px;
+  height: auto;
+  opacity: 0.92;
+}
+
+/* =========================
+   CARDS
 ========================= */
 .card{
-  background: var(--card);
+  background: var(--surfaceTint);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 40px 36px;
+  border-radius: var(--radius-card);
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
 }
 
 .card + .card{
-  margin-top: 22px;
+  margin-top: 16px;
 }
 
 .card-center{
   text-align: center;
+}
+
+.card-hero{
+  padding: 26px 22px;
 }
 
 /* =========================
@@ -80,45 +150,64 @@ h1{
   margin: 0;
   font-weight: 600;
   letter-spacing: -0.02em;
-  line-height: 1.08;
-  font-size: clamp(34px, 5.2vw, 52px);
+  line-height: 1.12;
+  font-size: clamp(30px, 4.6vw, 44px);
+  color: var(--headline);
+}
+
+h2{
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  font-size: 18px;
+  color: var(--headline);
 }
 
 p{
-  margin: 12px 0 0;
-  font-size: 18px;
+  margin: 0 0 12px 0;
+  font-size: 16px;
   color: var(--text);
 }
 
-.lead{
-  margin-top: 14px;
-  font-size: clamp(18px, 2.4vw, 20px);
-  color: var(--muted);
-  line-height: 1.6;
+p:last-child{
+  margin-bottom: 0;
 }
 
-strong { font-weight: 600; }
+strong{
+  font-weight: 600;
+  color: var(--headline);
+}
 
-.spacer{
-  margin-top: 20px;
+.section-title{
+  margin: 0 0 14px 0;
+}
+
+.section-kicker{
+  margin-bottom: 10px;
 }
 
 /* =========================
    LISTS
 ========================= */
 ul{
-  margin: 12px 0 0;
-  padding-left: 20px;
+  margin: 0;
+  padding-left: 18px;
 }
 
 li{
-  margin: 10px 0;
-  font-size: 18px;
+  margin: 8px 0;
+  font-size: 16px;
   color: var(--text);
+  line-height: 1.55;
+}
+
+.simple-list{
+  padding-left: 18px;
 }
 
 /* =========================
-   CTA
+   BUTTON
 ========================= */
 .btn-primary{
   display: inline-flex;
@@ -127,16 +216,16 @@ li{
   text-decoration: none;
 
   width: min(420px, 100%);
-  min-height: 52px; /* thumb friendly */
+  min-height: 52px;
   padding: 14px 18px;
 
   background: var(--accent);
-  color: var(--text);
-  border-radius: 6px;
-  border: 1px solid rgba(234, 231, 227, 0.9);
+  color: var(--headline);
+  border-radius: var(--radius-btn);
+  border: 1px solid rgba(58, 52, 48, 0.18);
 
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 600;
+  font-size: 15px;
   letter-spacing: -0.01em;
 
   transition: background-color 160ms ease, transform 160ms ease;
@@ -144,19 +233,105 @@ li{
 
 .btn-primary:hover{
   background: var(--accent-hover);
+  transform: translateY(-1px);
 }
 
 .btn-primary:active{
-  transform: translateY(1px);
-}
-
-.btn-primary:focus-visible{
-  outline: 2px solid rgba(43, 43, 43, 0.45);
-  outline-offset: 3px;
+  transform: translateY(0px);
 }
 
 /* =========================
-   FOOTER (LP)
+   HERO GRID (LP)
+========================= */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-subtitle{
+  margin: 10px 0 10px 0;
+  color: var(--subheadline);
+  line-height: 1.55;
+}
+
+.hero-micro{
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--subheadline);
+}
+
+.hero-bullets{
+  margin: 0 0 18px 18px;
+  padding: 0;
+}
+
+.hero-bullets li{
+  margin: 8px 0;
+}
+
+.hero-cta{
+  margin-top: 6px;
+}
+
+.product-cover{
+  width: min(380px, 100%);
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 52px rgba(58, 52, 48, 0.10);
+  margin: 0 auto;
+}
+
+/* =========================
+   TWO COL (For you / Not for you)
+========================= */
+.two-col{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* =========================
+   STEPS GRID (How it works)
+========================= */
+.steps-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.step{
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 14px;
+  background: rgba(248, 245, 240, 0.60);
+}
+
+.step-title{
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: var(--subheadline);
+}
+
+.step-text{
+  margin: 0;
+}
+
+/* =========================
+   AUTHORITY
+========================= */
+.authority{
+  margin: 0 0 14px 0;
+  font-size: 14px;
+  color: var(--subheadline);
+  font-weight: 500;
+}
+
+/* =========================
+   FOOTER
 ========================= */
 .site-footer{
   margin-top: 44px;
@@ -168,27 +343,24 @@ li{
   display: flex;
   flex-wrap: wrap;
   gap: 10px 14px;
+  justify-content: center;
 }
 
 .footer-nav a{
   font-size: 14px;
-  color: var(--muted);
-  text-decoration: none;
+  color: var(--subheadline);
   line-height: 1.4;
 }
 
 .footer-nav a:hover{
-  color: var(--text);
+  color: var(--headline);
   text-decoration: underline;
-}
-
-.footer-nav a:focus-visible{
-  outline: 2px solid rgba(43, 43, 43, 0.45);
-  outline-offset: 3px;
+  text-underline-offset: 3px;
 }
 
 /* =========================
-   LEGAL PAGES (back link)
+   LEGAL PAGES (editorial)
+   Your legal pages use .legal-back + h1 + p
 ========================= */
 .legal-back{
   margin-bottom: 18px;
@@ -196,34 +368,49 @@ li{
 
 .legal-back a{
   font-size: 14px;
-  color: var(--muted);
-  text-decoration: none;
+  color: var(--subheadline);
+  line-height: 1.4;
 }
 
 .legal-back a:hover{
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Legal pages headings (they use plain <h1>) */
-.container h1 + p{
-  margin-top: 16px;
+/* Editorial line-length on legal pages (and any plain text pages) */
+main.page .container p,
+main.page .container ul{
+  max-width: var(--text-max);
+}
+
+/* Keep headings premium on legal pages too */
+main.page .container h1,
+main.page .container h2,
+main.page .container h3{
+  color: var(--headline);
 }
 
 /* =========================
    MOBILE
 ========================= */
 @media (max-width: 640px){
-  .container{
-    padding: 56px 18px 44px;
+  :root{
+    --pad-top: 28px;
+    --pad-bottom: 44px;
+    --pad-x: 16px;
+  }
+
+  .brand-logo{
+    width: 165px;
   }
 
   .card{
-    padding: 32px 22px;
+    padding: 22px 18px;
     border-radius: 12px;
   }
 
   p, li{
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .btn-primary{
@@ -232,8 +419,66 @@ li{
 }
 
 /* =========================
+   DESKTOP COLUMNS (LP)
+========================= */
+@media (min-width: 900px){
+  :root{
+    --pad-top: 44px;
+    --pad-bottom: 64px;
+    --pad-x: 22px;
+  }
+
+  .topbar{
+    padding: 8px 2px 22px;
+  }
+
+  .brand-logo{
+    width: 185px;
+  }
+
+  .card{
+    padding: 28px 26px;
+  }
+
+  .card + .card{
+    margin-top: 18px;
+  }
+
+  .hero-grid{
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 26px;
+  }
+
+  .two-col{
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .steps-grid{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .footer-nav{
+    justify-content: flex-end;
+  }
+}
+
+/* =========================
+   TINY SCREENS (no overflow)
+========================= */
+@media (max-width: 380px){
+  .btn-primary{
+    min-width: 100%;
+  }
+}
+
+/* =========================
    REDUCED MOTION
 ========================= */
 @media (prefers-reduced-motion: reduce){
-  .btn-primary{ transition: none; }
+  .btn-primary{
+    transition: none;
+    transform: none;
+  }
 }
